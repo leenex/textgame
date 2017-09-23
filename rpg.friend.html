@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module rpg.friend</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="rpg.html"><font color="#ffffff">rpg</font></a>.friend</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/atle/Python/FutureLearn/week2/TextGame/rpg/friend.py">/home/atle/Python/FutureLearn/week2/TextGame/rpg/friend.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="rpg.character.html#Character">rpg.character.Character</a>(<a href="rpg.item.html#Item">rpg.item.Item</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rpg.friend.html#Friend">Friend</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Friend">class <strong>Friend</strong></a>(<a href="rpg.character.html#Character">rpg.character.Character</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rpg.friend.html#Friend">Friend</a></dd>
+<dd><a href="rpg.character.html#Character">rpg.character.Character</a></dd>
+<dd><a href="rpg.item.html#Item">rpg.item.Item</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Friend-__init__"><strong>__init__</strong></a>(self, en_name, en_descr, en_state='smiling')</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Friend-fight"><strong>fight</strong></a>(self, method)</dt></dl>
+
+<hr>
+Methods inherited from <a href="rpg.character.html#Character">rpg.character.Character</a>:<br>
+<dl><dt><a name="Friend-canSpeak"><strong>canSpeak</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Friend-respondTo"><strong>respondTo</strong></a>(self, stimuli)</dt><dd><tt>When&nbsp;the&nbsp;user&nbsp;types<br>
+say&nbsp;name&nbsp;stimuli<br>
+at&nbsp;the&nbsp;prompt,&nbsp;this&nbsp;funtion&nbsp;gets&nbsp;called&nbsp;with&nbsp;stimuli&nbsp;as&nbsp;argument.<br>
+Look&nbsp;through&nbsp;all&nbsp;the&nbsp;responses&nbsp;that&nbsp;have&nbsp;been&nbsp;added&nbsp;with&nbsp;<a href="#Friend-addResponse">addResponse</a>()<br>
+If&nbsp;a&nbsp;match&nbsp;is&nbsp;found,&nbsp;call&nbsp;the&nbsp;value&nbsp;as&nbsp;a&nbsp;function&nbsp;with&nbsp;stimuli&nbsp;as&nbsp;argument.<br>
+Example&nbsp;for&nbsp;a&nbsp;character&nbsp;named&nbsp;"Dave"&nbsp;whose&nbsp;instance&nbsp;variable&nbsp;is&nbsp;dave:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;shoot(stimuli):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Dave&nbsp;draws&nbsp;his&nbsp;gun&nbsp;and&nbsp;fires.&nbsp;Bang.&nbsp;Bang.&nbsp;Bang.")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dave.<a href="#Friend-addResponse">addResponse</a>("shoot",&nbsp;shoot)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;not&nbsp;stimuli&nbsp;match&nbsp;is&nbsp;found,&nbsp;say&nbsp;hello<br>
+If&nbsp;this&nbsp;character&nbsp;is&nbsp;Dead,&nbsp;utter&nbsp;a&nbsp;ghostly&nbsp;moan</tt></dd></dl>
+
+<dl><dt><a name="Friend-sayHello"><strong>sayHello</strong></a>(self, stimuli)</dt></dl>
+
+<dl><dt><a name="Friend-speak"><strong>speak</strong></a>(self, words)</dt><dd><tt>The&nbsp;preferred&nbsp;method&nbsp;for&nbsp;<a href="rpg.character.html#Character">Character</a>&nbsp;utterances.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rpg.character.html#Character">rpg.character.Character</a>:<br>
+<dl><dt><strong>magic_word</strong> = 'joke'</dl>
+
+<hr>
+Methods inherited from <a href="rpg.item.html#Item">rpg.item.Item</a>:<br>
+<dl><dt><a name="Friend-addResponse"><strong>addResponse</strong></a>(self, stimuli, response)</dt><dd><tt><a href="#Friend-addResponse">addResponse</a>(),&nbsp;<a href="#Friend-canSpeak">canSpeak</a>()&nbsp;and&nbsp;<a href="#Friend-respondTo">respondTo</a>()&nbsp;are&nbsp;intended&nbsp;to&nbsp;be&nbsp;overridden<br>
+by&nbsp;subclasses&nbsp;of&nbsp;objects&nbsp;cabable&nbsp;of&nbsp;reacting&nbsp;to&nbsp;spoken&nbsp;words<br>
+<a href="#Friend-respondTo">respondTo</a>(string)&nbsp;is&nbsp;called&nbsp;whenever&nbsp;the&nbsp;user&nbsp;types<br>
+say&nbsp;name&nbsp;string<br>
+The&nbsp;string&nbsp;is&nbsp;a&nbsp;key&nbsp;to&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;methods&nbsp;to&nbsp;be&nbsp;run&nbsp;with&nbsp;the&nbsp;key&nbsp;as&nbsp;parameter.</tt></dd></dl>
+
+<dl><dt><a name="Friend-getDescription"><strong>getDescription</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Friend-getName"><strong>getName</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Friend-getState"><strong>getState</strong></a>(self)</dt><dd><tt>Get&nbsp;the&nbsp;Item's&nbsp;state.&nbsp;The&nbsp;states&nbsp;Dead&nbsp;and&nbsp;open&nbsp;have&nbsp;meaning<br>
+apart&nbsp;from&nbsp;that,&nbsp;state&nbsp;can&nbsp;be&nbsp;any&nbsp;string<br>
+'</tt></dd></dl>
+
+<dl><dt><a name="Friend-hasItem"><strong>hasItem</strong></a>(self, item_name)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;this&nbsp;Item&nbsp;contains&nbsp;an&nbsp;Item&nbsp;whose<br>
+<a href="#Friend-getName">getName</a>()&nbsp;function&nbsp;equals&nbsp;item_name</tt></dd></dl>
+
+<dl><dt><a name="Friend-isContainer"><strong>isContainer</strong></a>(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;this&nbsp;Item&nbsp;contains&nbsp;other&nbsp;items</tt></dd></dl>
+
+<dl><dt><a name="Friend-openUp"><strong>openUp</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Friend-placeItem"><strong>placeItem</strong></a>(self, item, where)</dt><dd><tt>Place&nbsp;an&nbsp;item&nbsp;inside&nbsp;this&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="Friend-printDetails"><strong>printDetails</strong></a>(self)</dt><dd><tt>Print&nbsp;details&nbsp;about&nbsp;the&nbsp;item&nbsp;and&nbsp;any&nbsp;items&nbsp;it&nbsp;contains</tt></dd></dl>
+
+<dl><dt><a name="Friend-removeItem"><strong>removeItem</strong></a>(self, item_name)</dt><dd><tt>Remove&nbsp;item&nbsp;with&nbsp;name&nbsp;item_name&nbsp;from&nbsp;this&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="Friend-setState"><strong>setState</strong></a>(self, new_state)</dt><dd><tt>Set&nbsp;the&nbsp;Item's&nbsp;state.&nbsp;The&nbsp;states&nbsp;Dead&nbsp;and&nbsp;open&nbsp;have&nbsp;meaning<br>
+apart&nbsp;from&nbsp;that,&nbsp;state&nbsp;can&nbsp;be&nbsp;any&nbsp;string<br>
+'</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="rpg.item.html#Item">rpg.item.Item</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
